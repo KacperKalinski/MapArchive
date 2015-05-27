@@ -35,6 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Slim and Sass
 gem 'slim'
+gem 'slim-rails'
 gem 'sass'
 # Sass bootstrap
 gem 'boostrap-sass'

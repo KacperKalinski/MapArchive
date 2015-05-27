@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="933516875">
+    <data-source source="LOCAL" name="Rails MapArchive: development" uuid="76248bee-a35e-455a-a73e-89ae534e9a90">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/MapArchive_development</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails MapArchive: test" uuid="f4d9c0e6-2de6-495a-92d4-3e3917d7d5d5">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:MapArchive_test</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails MapArchive: production" uuid="7a137a08-1f61-4df4-bd42-41a0e4fd3028">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:MapArchive_production</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
