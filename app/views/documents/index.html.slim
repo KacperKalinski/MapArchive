@@ -1,3 +1,21 @@
 h1
   p Document#index
+table
+  tr
+    td
+      'Name
+    td
+      'Description
+    td
+      'File download
 
+  =@documents.each do |doc|
+    tr
+      td
+        = doc.name
+      td
+        = doc.short_description
+      td
+        'N/A yet
+
+=link_to 'Upload new document', new_document_path

@@ -1,16 +1,16 @@
 .form
   = form_for @document do |f|
     = if @document.errors.any?
-      h2 = "There are #{pluralize(@document.errors.count, "error")} errors:"
+      h2 = "There are #{pluralize(@document.errors.count, 'error')} errors:"
       ul
         = @document.errors.full_messages.each do |message|
           li = message
     .field
       = f.label :name
-      = f.text_field :name, :placeholder => "Document name"
+      = f.text_field :name, :placeholder => 'Document name'
     .field
       = f.label :short_description
-      = f.text_field :short_description, :placeholder => "Short description"
+      = f.text_field :short_description, :placeholder => 'Short description'
 
     .field
       = f.label :attachment
