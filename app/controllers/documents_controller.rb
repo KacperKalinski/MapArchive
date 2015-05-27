@@ -10,14 +10,15 @@ class DocumentsController < ApplicationController
   def create
     @document = Document.new(document_params)
 
-    if @document.save!
-      redirect_to documents_index_path , flash: "Document #{@document.name} added!"
+    if @document.save
+      flash[:notice] = "Document #{@document.name} added!"
+      redirect_to new_document_path
     else
       render 'new'
     end
   end
   private
   def document_params
-    params.require(:document).permit(:name, :short_description)
+    params.require(:document).permit(:name, :short_description, :attachment)
   end
 end

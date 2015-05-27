@@ -1,20 +1,19 @@
 .form
-  = form_for @document, :html => {:class => "document_form"} do |f|
-    - if @document.errors.any?
-      /id shortcut
-      #error_explanation
-        h2 = "There are #{pluralize(@document.errors.count, "error")} errors:"
-        ul
-          - @document.errors.full_messages.each do |message|
-            li = message
-    /class shortcut
+  = form_for @document do |f|
+    = if @document.errors.any?
+      h2 = "There are #{pluralize(@document.errors.count, "error")} errors:"
+      ul
+        = @document.errors.full_messages.each do |message|
+          li = message
     .field
       = f.label :name
-      /autofocus
-      = f.text_field :name, :placeholder => "Document name", :autofocus => ''
+      = f.text_field :name, :placeholder => "Document name"
     .field
       = f.label :short_description
       = f.text_field :short_description, :placeholder => "Short description"
 
+    .field
+      = f.label :attachment
+      = f.file_field :attachment
     .actions
-      .btn = f.submit 'Save'
+      .btn.btn-primary = f.submit 'Save'

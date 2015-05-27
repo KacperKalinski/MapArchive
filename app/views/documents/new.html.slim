@@ -1,4 +1,6 @@
-
-  == render 'form'
+= if flash[:notice]
+  .alert.alert-info
+    = flash[:notice]
+== render 'form'
 
 
