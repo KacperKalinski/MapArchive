@@ -1,9 +1,9 @@
 .form
   = form_for @document do |f|
-    = if @document.errors.any?
+    - if @document.errors.any?
       h2 = "There are #{pluralize(@document.errors.count, 'error')} errors:"
       ul
-        = @document.errors.full_messages.each do |message|
+        - @document.errors.full_messages.each do |message|
           li = message
     .field
       = f.label :name
