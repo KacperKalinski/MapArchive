@@ -14,4 +14,4 @@
 
 # Ignore config
 /config/database.yml
-.idea/
+/.idea/
