@@ -12,5 +12,6 @@
 !/log/.keep
 /tmp
 
-# Ignore database config
+# Ignore config
 /config/database.yml
+.idea/

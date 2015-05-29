@@ -4,7 +4,7 @@ class CreateDocuments < ActiveRecord::Migration
       t.string :name
       t.string :short_description
 
-      t.column :attachment, :oid, :null => true
+      t.string :attachment
       t.timestamps null: false
     end
   end

@@ -43,8 +43,9 @@ gem 'bootstrap-sass'
 
 # Carriewave for file upload
 gem 'carrierwave'
-# For database save
-gem 'carrierwave-postgresql'
+# For database save and load
+# gem 'carrierwave-postgresql'
+# gem 'postgresql_lo_streamer'
 
 # Papertrail for file version
 gem 'papertrail'

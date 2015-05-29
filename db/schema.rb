@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20150527142800) do
   create_table "documents", force: :cascade do |t|
     t.string   "name"
     t.string   "short_description"
-    t.integer  "attachment"
+    t.string   "attachment"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
