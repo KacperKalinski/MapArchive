@@ -18,4 +18,13 @@ table
       td
         =link_to 'Download', "#{doc.attachment_url}"
 
-=link_to 'Upload new document', new_document_path
+br
+-if current_user
+  |Signed in as
+  =current_user.login
+  br
+  =link_to 'Upload new document', new_document_path
+  br
+  =link_to 'Home page', root_path
+  br
+  =link_to 'Sign out', signout_path, method: 'delete'

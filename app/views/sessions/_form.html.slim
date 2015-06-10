@@ -1,0 +1,36 @@
+.form
+  = form_for :session, url: signin_path do |f|
+    .field
+      = f.label :login
+      = f.text_field :login
+    .field
+      = f.label :password
+      = f.password_field :password
+    .actions
+      .btn = f.submit 'Sign in'
+
+
+    /- if @user.errors.any?
+    /  h2 = "There are #{pluralize(@user.errors.count, 'error')} errors:"
+    /  ul
+    /    - @user.errors.full_messages.each do |message|
+    /      li = message
+    /
+    /.field
+    /  = f.label :login
+    /  = f.text_field :login
+    /.field
+    /  = f.label :email
+    /  = f.email_field :email
+    /.field
+    /  = f.label :password
+    /  = f.password_field :password
+    /.actions
+    /  .btn.btn-primary = f.submit 'Create account'
+
+
+      <%= form_for(:session, url: login_path) do |f| %>
+        <%= f.email_field :email, :placeholder => "Email" %>
+        <%= f.password_field :password, :placeholder => "Password" %>
+        <%= f.submit "Log in", class: "btn-submit" %>
+      <% end %>

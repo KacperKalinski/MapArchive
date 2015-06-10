@@ -1,5 +1,23 @@
 Rails.application.routes.draw do
+
+
+  get 'welcome/index'
+
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/delete'
+
   resources :documents , only: [:index, :new, :create]
+  resources :users, only: [:new, :create]#is that needed?
+  get 'signup' => 'users#new' #can be done like that?
+  get 'signin' => 'sessions#new' #can be done like that?
+  post 'signin' => 'sessions#create' #can be done like that?
+  delete 'signout' => 'sessions#destroy' #can be done like that?
+  root 'welcome#index'
+
+
   # get 'documents/download/:id' => 'documents#download'
 
   # mount PostgresqlLoStreamer::Engine => '/document_attachment'
@@ -8,7 +26,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'documents#index'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
