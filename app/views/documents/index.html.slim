@@ -1,30 +1,14 @@
 h1
   p Document#index
-table
-  tr
-    td
-      'Name
-    td
-      'Description
-    td
-      'File download
 
+ul.list-group
   - @documents.each do |doc|
-    tr
-      td
-        = doc.name
-      td
-        = doc.short_description
-      td
-        =link_to 'Download', "#{doc.attachment_url}"
-
-br
--if current_user
-  |Signed in as
-  =current_user.login
-  br
-  =link_to 'Upload new document', new_document_path
-  br
-  =link_to 'Home page', root_path
-  br
-  =link_to 'Sign out', signout_path, method: 'delete'
+    .col-xs-6.col-sm-4.col-md-3.col-lg-2
+      .panel.panel-default.document-short
+        .panel-heading
+          =doc.name
+        .panel-body
+          =doc.short_description
+        br
+        .btn.btn-xs.btn-default
+          =link_to 'Download', "#{doc.attachment_url}"

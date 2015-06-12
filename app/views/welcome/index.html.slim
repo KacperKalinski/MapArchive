@@ -7,17 +7,3 @@ h1 Welcome In Map Archives!
 p Map Archive is document archivization tool that storage all types of documents.
   For better collaboration you can also comment and create access groups to each document, and store
   different versions for each group.
-br
--if current_user
-  |Signed in as
-  =current_user.login
-  br
-  =link_to 'Upload document', new_document_path
-  br
-  =link_to 'Show uploaded documents', documents_path
-  br
-  =link_to 'Sign out', signout_path, method: 'delete'
-- else current_user
-  =link_to 'Sign in', signin_path
-  br
-  =link_to 'Sign up', signup_path

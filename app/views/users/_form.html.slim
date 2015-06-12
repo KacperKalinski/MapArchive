@@ -1,19 +1,11 @@
-.form
-  = form_for @user do |f|
-    - if @user.errors.any?
-      h2 = "There are #{pluralize(@user.errors.count, 'error')} errors:"
-      ul
-        - @user.errors.full_messages.each do |message|
-          li = message
-
-    .field
-      = f.label :login
-      = f.text_field :login
-    .field
-      = f.label :email
-      = f.email_field :email
-    .field
-      = f.label :password
-      = f.password_field :password
-    .actions
-      .btn = f.submit 'Create account'
+.form.col-xs-12.col-sm-6
+  - if @user.errors.any?
+    h2 = "There are #{pluralize(@user.errors.count, 'error')} errors:"
+    ul
+      - @user.errors.full_messages.each do |message|
+        li = message
+  = bootstrap_form_for @user do |f|
+    = f.text_field :login
+    = f.email_field :email
+    = f.password_field :password
+    = f.submit 'Create account'

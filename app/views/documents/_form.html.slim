@@ -1,19 +1,6 @@
-.form
-  = form_for @document do |f|
-    - if @document.errors.any?
-      h2 = "There are #{pluralize(@document.errors.count, 'error')} errors:"
-      ul
-        - @document.errors.full_messages.each do |message|
-          li = message
-    .field
-      = f.label :name
-      = f.text_field :name, :placeholder => 'Document name'
-    .field
-      = f.label :short_description
-      = f.text_field :short_description, :placeholder => 'Short description'
-
-    .field
-      = f.label :attachment
-      = f.file_field :attachment
-    .actions
-      .btn.btn-primary = f.submit 'Save'
+.form.col-xs-12.col-sm-6
+  = bootstrap_form_for @document do |f|
+    = f.text_field :name, :placeholder => 'Document name'
+    = f.text_area :short_description, :placeholder => 'Short description'
+    = f.file_field :attachment
+    = f.submit 'Save'

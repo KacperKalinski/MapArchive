@@ -1,20 +1,4 @@
-h1 Login
-- if flash[:notice]
-  .alert.alert-info
-    = flash[:notice]
+.form.col-xs-12.col-sm-6.col-sm-offset-3
 
-= render 'form'
-br
-=link_to 'Home page', root_path
-br
--if current_user
-  |Signed in as
-  =current_user.login
-  br
-  =link_to 'Sign out', signout_path,  method: 'delete'
-  br
-  =link_to 'Upload document', new_document_path
-  br
-  =link_to 'Show uploaded documents', documents_path
-- unless current_user
-  =link_to 'Sign up', signup_path
+  = render 'form'
+

@@ -39,7 +39,10 @@ gem 'slim-rails'
 gem 'sass'
 
 # Sass bootstrap
+gem 'bootstrap_form'
+gem 'twitter-bootstrap-rails'
 gem 'bootstrap-sass'
+
 
 # Carriewave for file upload
 gem 'carrierwave'
