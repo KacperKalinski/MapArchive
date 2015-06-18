@@ -1,6 +1,6 @@
 .form.col-xs-12.col-sm-6
   = bootstrap_form_for @document do |f|
-    = f.text_field :name, :placeholder => 'Document name'
+    = f.text_field :name, :placeholder => 'Document name', autofocus: :true
     = f.text_area :short_description, :placeholder => 'Short description'
     = f.file_field :attachment
     = f.submit 'Save'

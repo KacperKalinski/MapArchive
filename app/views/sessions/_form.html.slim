@@ -1,4 +1,4 @@
 = bootstrap_form_for :session, url: signin_path do |f|
-  = f.text_field :login
+  = f.text_field :login, autofocus: :true
   = f.password_field :password
   = f.submit 'Sign in'

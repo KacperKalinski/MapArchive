@@ -18,18 +18,13 @@ class DocumentsController < ApplicationController
     end
   end
 
-  # def download
-  #   doc = Document.find(params[:id])
-  #   send doc.attachment_url
-  #             # :filename => open("http://0.0.0.0:3000#{doc.attachment_url}").filename,
-  #             # :type => open(Rails.root + doc.attachment_url).content_type,
-  #             # :disposition => 'attachment'
-  #             # x_sendfile => true
-  #
-  #   render 'index', notice: "#{doc.name} download started!"
-  # end
+  def download
+    path = "#{request.original_fullpath[1..-1]}"
+    send_file path, :disposition => 'attachment', :x_sendfile=>true
+  end
 
   private
+
   def document_params
     params.require(:document).permit(:name, :short_description, :attachment)
   end
